@@ -1,0 +1,7 @@
+INFO:atlassian.confluence:Creating page "ds" -> "This is my sample page"
+DEBUG:atlassian.rest_client:curl --silent -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' --data '"{\"type\": \"page\", \"title\": \"This is my sample page\", \"space\": {\"key\": \"ds\"}, \"body\": {\"storage\": {\"value\": \"<h1>Hello world </h1>\", \"representation\": \"storage\"}}, \"metadata\": {\"properties\": {\"editor\": {\"value\": \"v2\"}}}}"' 'http://confluence-cluster-701-lb:2701/rest/api/content'
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): confluence-cluster-701-lb:2701
+DEBUG:urllib3.connectionpool:http://confluence-cluster-701-lb:2701 "POST /rest/api/content HTTP/1.1" 400 None
+DEBUG:atlassian.rest_client:HTTP: POST rest/api/content/ -> 400 
+DEBUG:atlassian.rest_client:HTTP: Response text -> {"statusCode":400,"data":{"authorized":false,"valid":true,"allowedInReadOnlyMode":true,"errors":[],"successful":false},"message":"A page with this title already exists: A page already exists with the title This is my sample page in the space with key ds","reason":"Bad Request"}
+ERROR:root:A page with this title already exists: A page already exists with the title This is my sample page in the space with key ds

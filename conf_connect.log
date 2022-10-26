@@ -1,0 +1,8 @@
+DEBUG:atlassian.rest_client:curl --silent -X GET -H 'Content-Type: application/json' -H 'Accept: application/json'  'http://davrv93.atlassian.net/wiki/rest/api/content?spaceKey=SPACE&title=demo'
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): davrv93.atlassian.net:80
+DEBUG:urllib3.connectionpool:http://davrv93.atlassian.net:80 "GET /wiki/rest/api/content?spaceKey=SPACE&title=demo HTTP/1.1" 301 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): davrv93.atlassian.net:443
+DEBUG:urllib3.connectionpool:https://davrv93.atlassian.net:443 "GET /wiki/rest/api/content?spaceKey=SPACE&title=demo HTTP/1.1" 401 None
+DEBUG:atlassian.rest_client:HTTP: GET rest/api/content -> 401 Unauthorized
+DEBUG:atlassian.rest_client:HTTP: Response text -> {"message":"Request rejected because issuer is either not authorized or not authorized to impersonate","status-code":401}
+ERROR:root:Request rejected because issuer is either not authorized or not authorized to impersonate

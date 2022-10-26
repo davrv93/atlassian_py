@@ -1,0 +1,16 @@
+version: '3' 
+services:
+  atlassian_api_701:
+    container_name: py_701
+    image: python:3.9
+    build:
+      context: app
+    ports: 
+      - "3091:3091"
+    volumes:
+      - "$PWD/:/tmp"
+    networks:
+      - net
+    tty: true
+networks:
+  net:
